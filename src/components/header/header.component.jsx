@@ -1,6 +1,7 @@
 //jshint esversion:6
 import React from 'react';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
 // eslint-disable-next-line
 import { auth } from '../../firebase/firebase.utils';
@@ -14,6 +15,7 @@ const Header = ({ currentUser }) => (
         <Link className='logo-container' to="/">
             <Logo className='logo' />
         </Link>
+
         <div className='options'>
             <Link className='option' to='/shop'>
                 SHOP
@@ -21,14 +23,21 @@ const Header = ({ currentUser }) => (
             <Link className='option' to='/shop'>
                 CONTACT
             </Link>
-            {
-                currentUser ?
-                <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
-                :
-                <Link className='option' to='/signin'>SIGN IN</Link>
-            }
+            {currentUser ? (
+                <div className='option' onClick={() => auth.signOut()}>
+                SIGN OUT
+            </div>
+            ) : (
+                <Link className='option' to='/signin'>
+                    SIGN IN
+                </Link>
+            )}
         </div>
     </div>
-)
+);
+// eslint-disable-next-line
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+})
 
-export default Header;
+export default connect(mapStateToProps)(Header);
