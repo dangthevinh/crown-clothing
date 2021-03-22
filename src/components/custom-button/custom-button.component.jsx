@@ -1,3 +1,4 @@
+//jshint esversion: 10
 import React from 'react';
 
 import './custom-button.styles.scss';
