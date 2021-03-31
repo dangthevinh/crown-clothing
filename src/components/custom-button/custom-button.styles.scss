@@ -1,59 +1,44 @@
-.custom-button {
-    background-image: linear-gradient(to right, #00c3ff 0%, #ffff1c  51%, #00c3ff  100%)
+.custom-button {  
+  background-image: linear-gradient(to right, #00c3ff 0%, #ffff1c  51%, #00c3ff  100%)
 }
 .custom-button {
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.3s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px rgb(174, 177, 180);
-    border-radius: 20px;
-    display: block;
-    border: none;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.2s;
+  background-size: 200% auto;
+  color: black;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+  // display: flex;
+  // justify-content: center;
+
+  &:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: white;
+    text-decoration: none;
+  }
+
+  &.google-sign-in {
+    color: #fff;
 
     &:hover {
-        background-position: right center; /* change the direction of the change here */
-        color: #fff;
-        text-decoration: none;
-      }
+      border: none;
+    }
+  }
+
+  &.inverted {
+    color: black;
+
+    &:hover {
+      color: #fff;
+      border: none;
+    }
+  }
+}           
+
+   
           
-    &:active {
-        outline: none;
-      } 
-    
-}
-
-
-         
-// .custom-button {
-//     min-width: 165px;
-//     width: auto;
-//     height: 50px;
-//     letter-spacing: 0.5px;
-//     line-height: 50px;
-//     padding: 0 35px;
-//     font-size: 15px;
-//     background-color: black;
-//     color: white;
-//     text-transform: uppercase;
-//     font-family: 'Open Sans Condensed';
-//     font-weight: bolder;
-//     border: none;
-//     border-radius: 20px;
-//     cursor: pointer
-
-//     &:hover {
-//         background-color: white;
-//         color: black;
-//         border: 1px solid black;
-//     }
-
-//     &:active {
-//         border-radius: 20px;
-//         outline: none;
-//     }
-// }
-
